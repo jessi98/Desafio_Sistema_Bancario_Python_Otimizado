@@ -1,24 +1,32 @@
-# Sistema Bancário Simples em Python Otimizando o Código- Etapa 2
+# Sistema Bancário Simples - Etapa 2
 
-Este é um sistema bancário básico desenvolvido em Python, que simula operações financeiras como depósito, saque, consulta de extrato, criação de usuários e contas bancárias. O projeto foi desenvolvido com foco em lógica procedural e pode ser utilizado como base para estudos e práticas de programação.
+Este projeto implementa um sistema bancário simples com funcionalidades básicas, focado em modularização e inclusão de novos recursos.
 
 ---
 
 ## Funcionalidades
 
-- Criar novos usuários (clientes)  
-- Criar novas contas bancárias associadas a usuários  
-- Realizar depósitos em contas  
-- Realizar saques com limite diário e limite por operação  
-- Consultar extrato da conta com histórico das transações  
-- Listar todas as contas criadas  
-- Menu interativo para seleção das operações  
+- **Menu interativo** com as seguintes opções:
+  - [1] Depositar
+  - [2] Sacar
+  - [3] Extrato
+  - [4] Nova Conta
+  - [5] Listar Contas
+  - [6] Novo Usuário
+  - [0] Sair
+
+- **Depósito e saque** com validação de valores, limite por saque e limite diário de saques.
+- **Extrato** exibindo o histórico das movimentações e saldo atual.
+- **Cadastro de usuários** com dados pessoais (nome, CPF, data de nascimento, endereço).
+- **Criação de contas bancárias** vinculadas aos usuários cadastrados.
+- **Listagem de contas** cadastradas com detalhes (agência, número da conta e titular).
 
 ---
 
-## Regras do Sistema
+## Estrutura do Código
 
-- Limite máximo por saque: R$ 500,00  
-- Limite de saques diários: 3 saques por conta  
-- Depósitos somente com valores positivos  
-- Usuários são identificados unicamente pelo CPF  
+- Uso de funções para organizar cada operação, como `deposito()`, `saque()`, `criar_usuario()`, `criar_cc()`, entre outras.
+- Função `menu()` para exibir o menu e receber a escolha do usuário.
+- Função `filtrar_usuarios()` para buscar usuários pelo CPF e evitar duplicidade.
+- Uso de listas para armazenar múltiplos usuários e contas em memória.
+- Função principal `main()` controla o fluxo do programa e mantém as variáveis de estado.
